@@ -13,7 +13,7 @@ points = rand(2,n);
 figure;
 plot(points(1,:), points(2,:), '.');
 axis square; axis equal;
-title("nuage de points");
+title("nuage de points algo plus petit cercle");
 axis([0 1 0 1]); hold on;
 
 centreX = (points(1,1) + points(1,2))/2;
