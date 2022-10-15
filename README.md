@@ -152,6 +152,56 @@ Lorsqu’on ajoute un point pi supplémentaire, deux cas de figure peuvent se pr
 • le point pi est inclus dans la sphère courant Di−1, le disque n’est pas modifié: Di ← Di−1;
 • le point pi n’est pas inclus dans la sphère courant Di−1, le disque doit être mis à jour.
 
+---
+title: " Algotithme_plus_petit_sphère"
+input: un ensemble P de points du plan
+output: le plus petit sphère englobant de P
+---
+```{r, eval = FALSE}
+D2 ←  sphère_defini_par_deux_points(P1, P2)
+pour i ← 3 à n
+    si pi ∈ Di−1 faire
+        Di ← Di−1
+    sinon faire
+        Di ←plus_petit_sphere_un_point({p1, p2, · · · , pi−1}, pi)
+    fin si
+fin pour
+```
+La fonction sphère_defini_par_deux_points(P1, P2) renvoie simplement la sphère de diamètre [pq].
+Dans le cas où le point pi n’appartient pas au sphère Di−1, la sphère est modifié grâce à l’algorithme ci-dessous de recherche de plus petit sphère sous contrainte de passer par le point q
 
+---
+title: " plus_petit_sphere__par_un_point(P, q)"
+input: un ensemble P de points du plan et un point q
+output: le plus petit cercle englobant de P passant par q
+---
+```{r, eval = FALSE}
+D1 ← sphère_defini_par_deux_points(p1, q)
+pour j ← 2 à n
+    si pj ∈ Dj−1 faire
+        Dj ← Dj−1
+    sinon faire
+        Dj ←plus_petit_sphere_par_deux_points({p1, p2, · · · , pj−1}, pj, q)
+    fin si
+fin pour
+```
+Appliquons une dernière fois la même démarche incrémentale:
+
+---
+title: " plus_petit_sphere_par_deux_points(P, q1, q2)"
+input: un ensemble P de points du plan et deux points q1 et q2
+output: le plus petit sphère englobant de P passant par q1 et q2
+
+---
+```{r, eval = FALSE}
+D0 ← sphère_defini_par_deux_points(q1, q2)
+pour k ← 2 à n
+    si pk ∈ Dk−1 faire
+        Dk ← Dk−1
+    sinon
+        Dk ←sphère_defini_par_trois_points({p1, p2, · · · , pk−1}, pk, q1, q2))
+    fin si
+fin pour
+```
 
 
