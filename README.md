@@ -4,8 +4,8 @@
 ## Algotithme naïf
 ---
 title: " Algotithme plus petit cercle naïf"
-
 output: Cercle Plus petit cercle englobant le nuage de points de l'entrée
+
 ---
 ```{r, eval = FALSE}
 Point1, Point2 <- Les 2 points les plus distants du cercle
