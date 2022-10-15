@@ -10,9 +10,9 @@ matrixCoefficient  = [2 * (p1x - p4x), 2 * (p1y - p4y), 2 * (p1z - p4z);
     2 * (p2x - p4x), 2 * (p2y - p4y), 2 * (p2z - p4z);
     2 * (p3x - p4x), 2 * (p3y - p4y), 2 * (p3z - p4z)];
 
-matrixResult = [p4x^2 - p1x^2 + p4y^2 - p1y^2 + p4z^2 - p1z^2;
-    p4x^2 - p2x^2 + p4y^2 - p2y^2 + p4z^2 - p2z^2;
-    p4x^2 - p3x^2 + p4y^2 - p3y^2 + p4z^2 - p3z^2];
+matrixResult = [p1x^2 - p4x^2 + p1y^2 - p4y^2 + p1z^2 - p4z^2;
+    p2x^2 - p4x^2 + p2y^2 - p4y^2 + p2z^2 - p4z^2;
+    p3x^2 - p4x^2 + p3y^2 - p4y^2 + p3z^2 - p4z^2];
 
 Centre = pinv(matrixCoefficient) * matrixResult;
 
