@@ -96,3 +96,62 @@ fin pour
 ## Résultat:
 ![Alt text](https://github.com/SABIR-ILYASS/Plus_petit_cercle_englobant/blob/main/Picture2D.png)
 <img scr="https://github.com/SABIR-ILYASS/Plus_petit_cercle_englobant/blob/main/Picture2D.png">
+
+# Plus petit sphère (en 3D)
+## Algotithme naïf
+---
+title: " Algotithme_plus_petit_sphère_naïf" </br>
+output: Cercle Plus petit sphère englobant le nuage de points de l'entrée
+
+---
+```{r, eval = FALSE}
+Point1, Point2 <- Les 2 points les plus distants du sphère
+sphère <- sphère englobant les Point1, Point2
+count = 2
+// tester ci D1 englobe tous les autres points.
+pour i <- 1 à n
+   si  not( Point_i ∈ Cercle)
+       count <- count + 1
+fi pour 
+
+si (count < n)
+   Point1, Point2, Point3 <- les 3 points les plus distants du sphère
+   sphère <- sphère englobant les Point1, Point2
+   count = 2
+   // tester ci D1 englobe tous les autres points.
+   pour i <- 1 à n
+        si  not( Point_i ∈ Cercle)
+        count <- count + 1
+    fi pour
+fin si
+
+si (count < n)
+   pour i <- 1 à n
+    pour j <- 1 à n
+        si (j != i)
+            pour k <- 1 à n
+                si (k != i et k != j)
+                    pour l <- 1 à n
+                        Di,j,k,l <-Sphère(P_i, P_j, P_k, P_l)
+                        // tester si ce cercle englobe tous les autres points
+                        si oui
+                            si le rayon de Di,j,k,l < le rayon de Sphère
+                                Sphère <- Di,j,k,l
+                            fin si
+                        fin si
+                    fin pour
+                fin si
+            fin pour
+        fin si
+    fin pour
+fin pour   
+```
+## Algotithme incrémental
+
+Lorsqu’on ajoute un point pi supplémentaire, deux cas de figure peuvent se présenter:
+• le point pi est inclus dans la sphère courant Di−1, le disque n’est pas modifié: Di ← Di−1;
+• le point pi n’est pas inclus dans la sphère courant Di−1, le disque doit être mis à jour.
+
+
+
+
