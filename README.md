@@ -220,4 +220,5 @@ fin pour
 ```
 
 ## Résultat:
-
+![Alt text](https://github.com/SABIR-ILYASS/Plus_petit_cercle_englobant/blob/main/Picture3D.png)
+<img scr="https://github.com/SABIR-ILYASS/Plus_petit_cercle_englobant/blob/main/Picture3D.png">
