@@ -41,6 +41,7 @@ fin pour
 Lorsqu’on ajoute un point pi supplémentaire, deux cas de figure peuvent se présenter:
 • le point pi est inclus dans le disque courant Di−1, le disque n’est pas modifié: Di ← Di−1;
 • le point pi n’est pas inclus dans le disque courant Di−1, le disque doit être mis à jour.
+
 ---
 title: " Algotithme_plus_petit_cercle"
 input: un ensemble P de points du plan
