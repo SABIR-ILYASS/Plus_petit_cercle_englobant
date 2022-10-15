@@ -94,5 +94,5 @@ pour k ← 1 à n
 fin pour
 ```
 ## Résultat:
+![Alt text](https://github.com/SABIR-ILYASS/Plus_petit_cercle_englobant/blob/main/Picture2D.png)
 <img scr="https://github.com/SABIR-ILYASS/Plus_petit_cercle_englobant/blob/main/Picture2D.png">
-
