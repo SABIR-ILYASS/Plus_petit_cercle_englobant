@@ -3,7 +3,7 @@
 
 ## Algotithme naïf
 ---
-title: " Algotithme plus petit cercle naïf"
+title: " Algotithme plus petit cercle naïf" </br>
 output: Cercle Plus petit cercle englobant le nuage de points de l'entrée
 
 ---
