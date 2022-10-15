@@ -204,4 +204,20 @@ pour k ← 2 à n
 fin pour
 ```
 
+---
+title: " plus_petit_sphere__par_trois_point(P, q1, q2, q3)"
+input: un ensemble P de points du plan et un point q
+
+```{r, eval = FALSE}
+D0 ← sphere_defini_par_deux_points(q1, q2)
+pour k ← 1 à n
+    si pk ∈ Dk−1 faire
+    Dk ← Dk−1
+    sinon
+        Dk ← sphere_defini_par_trois_points(pk, q1, q2)
+    fin si
+fin pour
+```
+
+## Résultat:
 
